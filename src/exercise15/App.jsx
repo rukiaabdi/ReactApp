@@ -1,5 +1,5 @@
 import { useState } from "react";
-import LanguageContext from "./exercise15/LanguageContext.js";
+import LanguageContext from "./exercise15/LanguageContext";
 import Greeting from "./exercise15/Greeting";
 
 function App() {
