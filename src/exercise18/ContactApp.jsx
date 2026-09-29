@@ -11,7 +11,9 @@ const reducer = (state, action) => {
 
     case "edit":
       return state.map((contact) =>
-        contact.id === action.payload.id ? action.payload : contact
+        contact.id === action.payload.id
+          ? action.payload
+          : contact
       );
 
     case "delete":
@@ -22,10 +24,7 @@ const reducer = (state, action) => {
     case "toggleFavorite":
       return state.map((contact) =>
         contact.id === action.payload
-          ? {
-              ...contact,
-              favorite: !contact.favorite,
-            }
+          ? { ...contact, favorite: !contact.favorite }
           : contact
       );
 
@@ -34,26 +33,39 @@ const reducer = (state, action) => {
   }
 };
 
-const ContactApp = () => {
+function ContactApp() {
   const [contacts, dispatch] = useReducer(
     reducer,
     initialState
   );
 
-  const [editingContact, setEditingContact] =
-    useState(null);
+  const [editingContact, setEditingContact] = useState(null);
 
   return (
-    <div>
-      <h1>Contact Management App</h1>
+    <div className="min-h-screen bg-gradient-to-br from-purple-100 to-blue-100 py-8 px-4">
 
-      <ContactForm dispatch={dispatch} editingContact={editingContact}
-        setEditingContact={setEditingContact}/>
+      <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-md p-8">
 
-      <ContactList contacts={contacts} dispatch={dispatch}
-        setEditingContact={setEditingContact}/>
+        <h1 className="text-4xl font-bold text-center mb-8">
+          Contact Management App
+        </h1>
+
+        <ContactForm
+          dispatch={dispatch}
+          editingContact={editingContact}
+          setEditingContact={setEditingContact}
+        />
+
+        <ContactList
+          contacts={contacts}
+          dispatch={dispatch}
+          setEditingContact={setEditingContact}
+        />
+
+      </div>
+
     </div>
   );
-};
+}
 
 export default ContactApp;
