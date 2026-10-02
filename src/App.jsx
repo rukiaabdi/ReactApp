@@ -1,4 +1,4 @@
-import ContactApp from "./exercise20/ContactApp";
+import ContactApp from "./exercise22/ContactApp";
 
 function App() {
   return (

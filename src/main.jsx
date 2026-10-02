@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import ContactApp from './exercise20/ContactApp.jsx'
+import Form from './exercise22/Form.jsx'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ContactApp/>
+    <Form/>
   </React.StrictMode>
 )
