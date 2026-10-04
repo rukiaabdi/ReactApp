@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import ApplicationForm from './exercise23/ApplicationForm.jsx'
+import App from './exercise24/App.jsx'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ApplicationForm/>
+    <App/>
   </React.StrictMode>
 )
