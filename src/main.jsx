@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './exercise24/App.jsx'
+import StudentDashboard from './exercise21/StudentDashboard.jsx'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App/>
+    <StudentDashboard/>
   </React.StrictMode>
 )
