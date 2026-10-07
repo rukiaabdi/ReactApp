@@ -1,9 +1,13 @@
-import ContactApp from "./exercise22/ContactApp";
+// import { Outlet } from "react-router-dom";
+// import Navbar from "./exercise25/components/Navbar";
 
-function App() {
-  return (
-    <ContactApp />
-  );
-}
+// function App() {
+//   return (
+//     <>
+//       <Navbar />
+//       <Outlet />
+//     </>
+//   );
+// }
 
-export default App;
+// export default App;
