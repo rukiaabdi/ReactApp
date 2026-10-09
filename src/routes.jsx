@@ -1,59 +1,43 @@
-// import { createBrowserRouter } from "react-router-dom";
 
-// import App from "./App";
-// import Home from "./exercise25/pages/Home";
-// import Recipes from "./exercise25/pages/Recipes";
-// import RecipeDetail from "./exercise25/pages/RecipeDetail";
-// import Categories from "./exercise25/pages/Categories";
-// import CategoryRecipes from "./exercise25/pages/CategoryRecipes";
-// import NotFound from "./exercise25/pages/NotFound";
+// import React from 'react';
+// import { createBrowserRouter } from 'react-router-dom';
+
+// import App from './exercise26/App';
+// import Home from './exercise26/Components/Home';
+// import PostDetail from './exercise26/Components/PostDetail';
+// import CreatePost from './exercise26/Components/CreatePost';
+// import Login from './exercise26/Components/Login';
+// import NotFound from './exercise26/Components/NotFound';
+// import ProtectedRoute from './exercise26/Components/ProtectedRoute';
 
 // const router = createBrowserRouter([
 //   {
-//     path: "/",
+//     path: '/',
 //     element: <App />,
+//     errorElement: <NotFound />,
 //     children: [
 //       {
 //         index: true,
-//         element: <Home />,
+//         element: <Home />
 //       },
 //       {
-//         path: "recipes",
-//         element: <Recipes />,
+//         path: 'posts/:postId',
+//         element: <PostDetail />
 //       },
 //       {
-//         path: "recipes/:id",
-//         element: <RecipeDetail />,
+//         path: 'create',
+//         element: (
+//           <ProtectedRoute>
+//             <CreatePost />
+//           </ProtectedRoute>
+//         )
 //       },
 //       {
-//         path: "categories",
-//         element: <Categories />,
-//         children: [
-//           {
-//             index: true,
-//             element: (
-//               <div>
-//                 <h2 className="text-2xl font-bold mb-2">
-//                   Select a category
-//                 </h2>
-//                 <p className="text-gray-600">
-//                   Choose a category from the sidebar.
-//                 </p>
-//               </div>
-//             ),
-//           },
-//           {
-//             path: ":categoryId",
-//             element: <CategoryRecipes />,
-//           },
-//         ],
-//       },
-//       {
-//         path: "*",
-//         element: <NotFound />,
-//       },
-//     ],
-//   },
+//         path: 'login',
+//         element: <Login />
+//       }
+//     ]
+//   }
 // ]);
 
 // export default router;
